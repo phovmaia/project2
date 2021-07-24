@@ -93,7 +93,7 @@ class Game:
     def play_round(self):
         move1 = self.p1.move()
         move2 = self.p2.move()
-        print(f"Player 1: {move1}  Player 2: {move2}")
+        print(f"Player 1: {move1}  Player 2: {move2}\n")
         if move1 == move2:
             print("*** TIE ***")
             print(f"Score: Player One: {self.countp1},"
@@ -125,9 +125,10 @@ class Game:
             print("*** FINAL SCORE ***")
             print(f"PLYAER ONE: {countp1}, PLAYER TWO: {countp2}")
 
-# def play_again(self):
-# print("Do you want to play another game?")
-# return valid_input("Yes or no? -> ", play_again)
+    def play_again(self):
+        print("Do you want to play another game?")
+        response = valid_input("Yes or no? -> ", play_again)
+        return response
 
     def play_game(self):
         print("Let's play some Rock, Paper or Scissors, go!\n"
@@ -137,7 +138,7 @@ class Game:
             print(f"Round {round}:")
             self.play_round()
         self.get_winner(self.countp1, self.countp2)
-        print("Game over!")
+        print("Game over!\n")
 
 
 players = (ReflectPlayer(), RandomPlayer(), CyclePlayer())
@@ -146,3 +147,8 @@ random_players = random.choice(players)
 if __name__ == '__main__':
     game = Game(HumanPlayer(), RandomPlayer())
     game.play_game()
+    response = game.play_again()
+    if response == "yes":
+        game.play_game()
+    else:
+        print("Bye bye, see you soon.")
