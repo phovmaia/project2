@@ -22,7 +22,7 @@ class Player:
     their_move = None
 
     def move(self):
-        return
+        return "rock"
 
     def learn(self, my_move, their_move):
         self.my_move = my_move
@@ -141,7 +141,7 @@ class Game:
         print("Game over!\n")
 
 
-players = (ReflectPlayer(), RandomPlayer(), CyclePlayer())
+players = (ReflectPlayer(), RandomPlayer(), CyclePlayer(), Player())
 random_players = random.choice(players)
 
 if __name__ == '__main__':
