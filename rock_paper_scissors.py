@@ -115,15 +115,15 @@ class Game:
         if countp1 == countp2:
             print("*** IT'S A TIE ***")
             print("*** FINAL SCORE ***")
-            print(f"PLYAER ONE: {countp1}, PLAYER TWO: {countp2}")
+            print(f"PLAYER ONE: {countp1}, PLAYER TWO: {countp2}")
         elif countp1 > countp2:
             print("*** PLAYER ONE WINS THE GAME ***")
             print("*** FINAL SCORE ***")
-            print(f"PLYAER ONE: {countp1}, PLAYER TWO: {countp2}")
+            print(f"PLAYER ONE: {countp1}, PLAYER TWO: {countp2}")
         else:
             print("*** PLAYER TWO WINS THE GAME ***")
             print("*** FINAL SCORE ***")
-            print(f"PLYAER ONE: {countp1}, PLAYER TWO: {countp2}")
+            print(f"PLAYER ONE: {countp1}, PLAYER TWO: {countp2}")
 
     def play_again(self):
         print("Do you want to play another game?")
